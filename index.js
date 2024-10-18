@@ -1,8 +1,11 @@
-import QRscanner from './src/QRScanner'
-import { NativeModules } from 'react-native';
+// import QRscanner from './src/QRScanner'
+import { NativeModules } from "react-native";
 
-const QRreader = (fileUrl)=>{
+const QRreader = (fileUrl) => {
   var QRScanReader = NativeModules.QRScanReader;
-  return QRScanReader.readerQR(fileUrl);    
-}
-export {QRscanner, QRreader}
+  return QRScanReader.readerQR(fileUrl);
+};
+export {
+  // QRscanner, // removed QrScanner dependency
+  QRreader,
+};
